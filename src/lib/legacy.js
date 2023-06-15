@@ -1375,7 +1375,7 @@ export function isLocal() {
 
 export function getHomeUrl() {
   if (isLocal()) {
-    return "http://localhost:3010";
+    return "http://localhost:3013";
   }
 
   return "/";
@@ -1383,7 +1383,7 @@ export function getHomeUrl() {
 
 export function getAppBaseUrl() {
   if (isLocal()) {
-    return "http://localhost:3011/#";
+    return "http://localhost:3014/#";
   }
 
   return "/#";
