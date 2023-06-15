@@ -77,7 +77,6 @@ export async function getChartPricesFromMexc(chainId, symbol, period) {
   const openPriceMode = "LAST_CLOSE";
   const interval = MEXC_CHART_PERIODS[period];
   const apiUrl = `${MEXC_API_URL}?end=${endTime}&interval=${interval}&openPriceMode=${openPriceMode}&start=${startTime}&symbol=${symbol}_USDT`;
-
   const TIMEOUT = 5000;
   const res = await new Promise(async (resolve, reject) => {
     let done = false;
@@ -129,9 +128,11 @@ export async function getChartPricesFromMexc(chainId, symbol, period) {
 async function getChartPricesFromStats(chainId, symbol, period) {
   if (
     chainId === MAINNET &&
-    (symbol === "PEPE" || symbol === "WOJAK" || symbol === "LADYS" || symbol === "BOB" || symbol === "DOGE")
+    (symbol === "UNI" || symbol === "LINK" || symbol === "USDC" || symbol === "USDT" || symbol === "DAI")
   ) {
     if (symbol === "WCRO") return getChartPricesFromMexc(chainId, "CRO", period);
+    if (symbol === "WBTC") return getChartPricesFromMexc(chainId, "BTC", period);
+    if (symbol === "WETH") return getChartPricesFromMexc(chainId, "ETH", period);
     return getChartPricesFromMexc(chainId, symbol, period);
   }
 
@@ -145,6 +146,7 @@ async function getChartPricesFromStats(chainId, symbol, period) {
   const timeDiff = CHART_PERIODS[period] * 3000;
   const from = Math.floor(Date.now() / 1000 - timeDiff);
   const url = `${GMX_STATS_API_URL}/candles/${symbol}?preferableChainId=${chainId}&period=${period}&from=${from}&preferableSource=fast`;
+  console.log (url, "<<<<<<<<<<<<<<<<")
 
   const TIMEOUT = 5000;
   const res = await new Promise(async (resolve, reject) => {

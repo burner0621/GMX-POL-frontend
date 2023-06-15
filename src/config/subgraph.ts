@@ -8,9 +8,9 @@ export const SUBGRAPH_URLS = {
   },
 
   [MAINNET]: {
-    stats: "https://api.thegraph.com/subgraphs/name/glorydream413/POL",
-    referrals: "https://api.thegraph.com/subgraphs/name/glorydream413/POL-referrals",
-    trades:"https://api.thegraph.com/subgraphs/name/glorydream413/POL-trades",
+    stats: "https://api.thegraph.com/subgraphs/name/glorydream413/polo-stats",
+    referrals: "https://api.thegraph.com/subgraphs/name/glorydream413/polo-referrals",
+    trades:"https://api.thegraph.com/subgraphs/name/glorydream413/polo-trades",
   },
 
   common: {

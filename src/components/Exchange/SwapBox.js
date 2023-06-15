@@ -272,7 +272,7 @@ export default function SwapBox(props) {
   const tokens = getTokens(chainId);
   const fromTokens = tokens;
   const stableTokens = tokens.filter((token) => token.isStable);
-  const indexTokens = whitelistedTokens.filter((token) => !token.isStable && !token.isWrapped && token.isMemeCoin);
+  const indexTokens = whitelistedTokens.filter((token) => !token.isStable && !token.isWrapped);
   const shortableTokens = indexTokens.filter((token) => token.isShortable);
 
   let toTokens = tokens;

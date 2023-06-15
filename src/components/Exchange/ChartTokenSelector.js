@@ -16,8 +16,8 @@ export default function ChartTokenSelector(props) {
   let options = getTokens(chainId);
 
   const whitelistedTokens = getWhitelistedTokens(chainId);
-  let indexTokens = whitelistedTokens.filter((token) => !token.isStable && !token.isWrapped && token.isMemeCoin);
-  let shortableTokens = indexTokens.filter((token) => token.isShortable && token.isMemeCoin);
+  let indexTokens = whitelistedTokens.filter((token) => !token.isStable && !token.isWrapped);
+  let shortableTokens = indexTokens.filter((token) => token.isShortable);
 
   if (isLong) {
     options = indexTokens;

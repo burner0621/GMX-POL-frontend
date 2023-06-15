@@ -51,6 +51,7 @@ import { bigNumberify, formatAmount } from "lib/numbers";
 import { getToken, getTokenBySymbol, getTokens, getWhitelistedTokens } from "config/tokens";
 import { useChainId } from "lib/chains";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import TokenSelector from "components/Exchange/TokenSelector";
 const { AddressZero } = ethers.constants;
 
 const PENDING_POSITION_VALID_DURATION = 600 * 1000;
@@ -412,19 +413,17 @@ export const Exchange = forwardRef((props, ref) => {
         to: getTokenBySymbol(chainId, defaultCollateralSymbol).address,
       },
       [LONG]: {
-        // from: "0x979c80C31A57C885e5160009ed8FB1e78f496C7D",
-        // to: "0x979c80C31A57C885e5160009ed8FB1e78f496C7D",
         from: AddressZero,
         to: AddressZero,
       },
       [SHORT]: {
         from: getTokenBySymbol(chainId, defaultCollateralSymbol).address,
-        // to: "0x979c80C31A57C885e5160009ed8FB1e78f496C7D",
         to: AddressZero,
       },
     }),
     [chainId, defaultCollateralSymbol]
   );
+  console.log (defaultTokenSelection, "DDDDDDDDDDDDDDDDD")
 
   const [tokenSelection, setTokenSelection] = useLocalStorageByChainId(
     chainId,
@@ -435,6 +434,7 @@ export const Exchange = forwardRef((props, ref) => {
 
   const fromTokenAddress = tokenSelection[swapOption].from;
   const toTokenAddress = tokenSelection[swapOption].to;
+  console.log (tokenSelection, swapOption, chainId, "KKKKKKKKKKKKKKKKK")
 
   const setFromTokenAddress = useCallback(
     (selectedSwapOption, address) => {
