@@ -27,7 +27,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "Wrapped BTC",
       symbol: "WBTC",
-      decimals: 18,
+      decimals: 8,
       address: "0xa33ac1C966a48Eed6A4F4026416ADD2355A1aAae",
       isStable: false,
       coingeckoUrl: "https://www.coingecko.com/en/coins/usd-coin",
@@ -64,7 +64,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "USD Tether",
       symbol: "USDT",
-      decimals: 18,
+      decimals: 6,
       address: "0x3a589D6C10fAb020EA5c8b4503Fe974883BE2752",
       coingeckoUrl: "https://www.coingecko.com/en/coins/usd-coin",
       imageUrl: "https://assets.coingecko.com/coins/images/30194/small/logo.png?1683607297",
@@ -82,7 +82,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "FRAX",
       symbol: "FRAX",
-      decimals: 8,
+      decimals: 18,
       address: "0xebDDEb185be1f9dFD01F1a04B4F13a7F2ac67AF2",
       coingeckoUrl: "https://www.coingecko.com/en/coins/usd-coin",
       imageUrl: "https://assets.coingecko.com/coins/images/5/thumb/dogecoin.png?1547792256",
