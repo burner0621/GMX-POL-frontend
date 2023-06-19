@@ -123,7 +123,7 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
               <Trans>
                 Get fee discounts and earn rebates through the $POL referral program. For more information, please read
                 the{" "}
-                <ExternalLink href="https://zomi.gitbook.referrals">
+                <ExternalLink href="https://polo.gitbook.referrals">
                   referral program details
                 </ExternalLink>
                 .
