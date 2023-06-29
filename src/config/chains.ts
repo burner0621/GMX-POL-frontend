@@ -3,7 +3,7 @@ import { isDevelopment } from "lib/legacy";
 
 const { parseEther } = ethers.utils;
 
-export const MAINNET = 5;
+export const MAINNET = 42161;
 export const ARBITRUM = 42161;
 
 export const DEFAULT_CHAIN_ID = MAINNET;

@@ -6,7 +6,7 @@ export const chainlinkClient = createClient(SUBGRAPH_URLS.common.chainLink);
 
 export const arbitrumGraphClient = createClient(SUBGRAPH_URLS[ARBITRUM].stats);
 export const arbitrumReferralsGraphClient = createClient(SUBGRAPH_URLS[ARBITRUM].referrals);
-export const nissohGraphClient = createClient(SUBGRAPH_URLS[ARBITRUM].nissohVault);
+export const nissohGraphClient = createClient(SUBGRAPH_URLS[ARBITRUM].trades);
 
 export const ethGraphClient = createClient(SUBGRAPH_URLS[MAINNET].stats);
 export const ethReferralsGraphClient = createClient(SUBGRAPH_URLS[MAINNET].referrals);

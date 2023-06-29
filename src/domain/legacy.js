@@ -1361,7 +1361,7 @@ export function useGmxPrice(chainId, libraries, active) {
 }
 
 function useGmxPriceFromEthereum() {
-  const poolAddress = getContract(MAINNET, "TraderJoeGmxAvaxPool");
+  const poolAddress = getContract(MAINNET, "UniswapGmxEthPool");
 
   const { data, mutate: updateReserves } = useSWR(["TraderJoeGmxAvaxReserves", MAINNET, poolAddress, "getReserves"], {
     fetcher: contractFetcher(undefined, UniswapV2),
@@ -1442,7 +1442,7 @@ export function useTotalGmxStaked() {
 }
 
 export function useTotalGmxInLiquidity() {
-  let poolAddressEth = getContract(MAINNET, "TraderJoeGmxAvaxPool");
+  let poolAddressEth = getContract(MAINNET, "UniswapGmxEthPool");
   let totalGMX = useRef(bigNumberify(0));
 
   const { data: gmxInLiquidityOnEth, mutate: mutateGMXInLiquidityOnEth } = useSWR(
