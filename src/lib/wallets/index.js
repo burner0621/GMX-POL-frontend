@@ -315,4 +315,3 @@ export async function addTokenToMetamask(token) {
     console.error(error);
   }
 }
-DEFAULT_CHAIN_ID
