@@ -2,6 +2,7 @@ import { ARBITRUM, MAINNET } from "config/chains";
 import { getContract } from "config/contracts";
 
 const ETH_GMX = getContract(MAINNET, "GMX");
+const ARBITRUM_GMX = getContract(ARBITRUM, "GMX").toLowerCase();
 
 type Exchange = {
   name: string;
@@ -19,6 +20,12 @@ export const EXTERNAL_LINKS = {
     buyGmx: {
       banxa: "https://gmx.banxa.com/?coinType=GMX&fiatType=USD&fiatAmount=500&blockchain=avalanche",
       traderjoe: `https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=${ETH_GMX}`,
+    },
+  },
+  [ARBITRUM]: {
+    networkWebsite: "https://arbitrum.io/",
+    buyGmx: {
+      uniswap: `https://app.uniswap.org/#/swap?inputCurrency=ETH&outputCurrency=${ARBITRUM_GMX}`,
     },
   },
 };

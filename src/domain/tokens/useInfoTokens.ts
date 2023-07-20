@@ -50,7 +50,7 @@ export function useInfoTokens(
         whitelistedTokenAddresses,
       ]),
     }
-  );
+  ); console.log (vaultTokenInfo, ">>>>>>>>>>>")
   const indexPricesUrl = getServerUrl(chainId, "/prices");
 
   const { data: indexPrices } = useSWR([indexPricesUrl], {

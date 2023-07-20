@@ -71,11 +71,11 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-apr">
             {/* <Trans>Arbitrum APR:</Trans> <APRLabel chainId={ARBITRUM} label="gmxAprTotal" />,{" "} */}
-            <Trans>Ethereum APR:</Trans> <APRLabel chainId={MAINNET} label="gmxAprTotal" key="MAINNET" />
+            <Trans>Ethereum APR:</Trans> <APRLabel chainId={ARBITRUM} label="gmxAprTotal" key="ARBITRUM" />
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
-              <BuyLink to="/buy_POL" className="default-btn" network={MAINNET}>
+              <BuyLink to="/buy_POL" className="default-btn" network={ARBITRUM}>
                 <Trans>Buy</Trans>
               </BuyLink>
             </div>
@@ -98,14 +98,14 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-apr">
             {/* <Trans>Arbitrum APR:</Trans> <APRLabel chainId={ARBITRUM} label="glpAprTotal" key="ARBITRUM" />,{" "} */}
-            <Trans>Ethereum APR:</Trans> <APRLabel chainId={MAINNET} label="glpAprTotal" key="MAINNET" />
+            <Trans>Ethereum APR:</Trans> <APRLabel chainId={ARBITRUM} label="glpAprTotal" key="ARBITRUM" />
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
               {/* <BuyLink to="/buy_mlp" className="default-btn" network={ARBITRUM}>
                 <Trans>Buy on Arbitrum</Trans>
               </BuyLink> */}
-              <BuyLink to="/buy_mlp" className="default-btn" network={MAINNET}>
+              <BuyLink to="/buy_mlp" className="default-btn" network={ARBITRUM}>
                 <Trans>Buy</Trans>
               </BuyLink>
             </div>
