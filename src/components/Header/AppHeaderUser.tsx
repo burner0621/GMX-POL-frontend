@@ -39,8 +39,8 @@ export function AppHeaderUser({
 
   const networkOptions = [
     {
-      label: getChainName(MAINNET),
-      value: MAINNET,
+      label: getChainName(ARBITRUM),
+      value: ARBITRUM,
       icon: "ic_eth_24.svg",
       color: "#E841424D",
     },

@@ -6,7 +6,7 @@ const { parseEther } = ethers.utils;
 export const MAINNET = 5;
 export const ARBITRUM = 42161;
 
-export const DEFAULT_CHAIN_ID = MAINNET;
+export const DEFAULT_CHAIN_ID = ARBITRUM;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
 export const SUPPORTED_CHAIN_IDS = [ARBITRUM];
@@ -16,8 +16,8 @@ if (isDevelopment()) {
 }
 
 export const IS_NETWORK_DISABLED = {
-  [ARBITRUM]: false,
-  [MAINNET]: true,
+  [ARBITRUM]: true,
+  [MAINNET]: false,
 };
 
 export const CHAIN_NAMES_MAP = {

@@ -171,7 +171,7 @@ export default function ClaimEsGmx({ setPendingTxns }) {
   const { data: avaxVestingInfo } = useSWR(
     [
       `StakeV2:vestingInfo:${active}`,
-      MAINNET,
+      ARBITRUM,
       avaxRewardReaderAddress,
       "getVestingInfoV2",
       account || PLACEHOLDER_ACCOUNT,

@@ -24,7 +24,7 @@ export function useInfoTokens(
   fundingRateInfo?: BigNumber[],
   vaultPropsLength?: number
 ) {
-  const tokens = getTokens(chainId);
+  const tokens = getTokens(chainId);console.log (chainId, ">>>>>>>>>>>>>")
   const vaultReaderAddress = getContract(chainId, "VaultReader");
   const vaultAddress = getContract(chainId, "Vault");
   const positionRouterAddress = getContract(chainId, "PositionManager");
@@ -50,7 +50,7 @@ export function useInfoTokens(
         whitelistedTokenAddresses,
       ]),
     }
-  ); console.log (vaultTokenInfo, ">>>>>>>>>>>")
+  );
   const indexPricesUrl = getServerUrl(chainId, "/prices");
 
   const { data: indexPrices } = useSWR([indexPricesUrl], {

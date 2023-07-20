@@ -10,11 +10,11 @@ import avalancheIcon from "img/ic_weth_16.svg";
 
 import "./Ecosystem.css";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import { MAINNET } from "config/chains";
+import { MAINNET, ARBITRUM } from "config/chains";
 import { t } from "@lingui/macro";
 
 const NETWORK_ICONS = {
-  [MAINNET]: avalancheIcon,
+  [ARBITRUM]: avalancheIcon,
 };
 
 const NETWORK_ICON_ALTS = {
@@ -28,14 +28,14 @@ export default function Ecosystem() {
       link: "https://stats.zomi.exchange/",
       linkLabel: "stats.zomi.exchange",
       about: t`$POL Stats Page`,
-      chainIds: [MAINNET],
+      chainIds: [ARBITRUM],
     },
     {
       title: "$POL Announcements",
       link: "https://t.me/zomichat",
       linkLabel: "t.me",
       about: t`$POL Announcements and Updates`,
-      chainIds: [MAINNET],
+      chainIds: [ARBITRUM],
     },
   ];
 

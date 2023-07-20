@@ -140,7 +140,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       name: "USD Coin",
       symbol: "USDC",
       decimals: 6,
-      address: "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8",
+      address: "0xaf88d065e77c8cC2239327C5EDb3A432268e5831",
       isStable: true,
       imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
     },
@@ -183,21 +183,21 @@ export const TOKENS: { [chainId: number]: Token[] } = {
 export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
   [ARBITRUM]: [
     {
-      name: "GMX",
-      symbol: "GMX",
+      name: "POL",
+      symbol: "POL",
       address: getContract(ARBITRUM, "GMX"),
       decimals: 18,
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     {
       name: "Escrowed $POL",
-      symbol: "esGMX",
+      symbol: "esPOL",
       address: getContract(ARBITRUM, "ES_GMX"),
       decimals: 18,
     },
     {
-      name: "GMX LP",
-      symbol: "GLP",
+      name: "POL LP",
+      symbol: "PLP",
       address: getContract(ARBITRUM, "GLP"),
       decimals: 18,
       imageUrl: "https://github.com/zomi/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
@@ -231,15 +231,15 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
   [ARBITRUM]: {
     // arbitrum
     GMX: {
-      name: "GMX",
-      symbol: "GMX",
+      name: "POL",
+      symbol: "POL",
       decimals: 18,
       address: getContract(ARBITRUM, "GMX"),
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     GLP: {
-      name: "GMX LP",
-      symbol: "GLP",
+      name: "POL LP",
+      symbol: "PLP",
       decimals: 18,
       address: getContract(ARBITRUM, "StakedGlpTracker"), // address of fsGLP token because user only holds fsGLP
       imageUrl: "https://github.com/zomi/gmx-assets/blob/main/GMX-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",

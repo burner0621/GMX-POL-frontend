@@ -57,7 +57,7 @@
     "react-error-overlay": "6.0.9"
   },
   "scripts": {
-    "start": "PORT=3013 react-scripts start",
+    "start": "PORT=3014 react-scripts start",
     "start-home": "yarn lingui:prepare && PORT=3013 env-cmd -e development-home react-scripts start",
     "start-app": "yarn lingui:prepare && PORT=3011 env-cmd -e development-app react-scripts start",
     "start-win": "set PORT=3013&react-scripts start",

@@ -103,11 +103,11 @@ export function useUserCodesOnAllChain(account) {
         })
       );
       const [codeOwnersOnEthereum = []] = await Promise.all([
-        getCodeOwnersData(MAINNET, account, arbitrumCodes),
+        getCodeOwnersData(ARBITRUM, account, arbitrumCodes),
       ]);
 
       setData({
-        [MAINNET]: codeOwnersOnEthereum.reduce((acc, cv) => {
+        [ARBITRUM]: codeOwnersOnEthereum.reduce((acc, cv) => {
           acc[cv.code] = cv;
           return acc;
         }, {}),

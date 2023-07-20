@@ -423,7 +423,6 @@ export const Exchange = forwardRef((props, ref) => {
     }),
     [chainId, defaultCollateralSymbol]
   );
-  console.log (defaultTokenSelection, "DDDDDDDDDDDDDDDDD")
 
   const [tokenSelection, setTokenSelection] = useLocalStorageByChainId(
     chainId,
@@ -434,7 +433,6 @@ export const Exchange = forwardRef((props, ref) => {
 
   const fromTokenAddress = tokenSelection[swapOption].from;
   const toTokenAddress = tokenSelection[swapOption].to;
-  console.log (tokenSelection, swapOption, chainId, "KKKKKKKKKKKKKKKKK")
 
   const setFromTokenAddress = useCallback(
     (selectedSwapOption, address) => {

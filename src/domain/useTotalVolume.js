@@ -3,7 +3,7 @@ import { arrayURLFetcher, getTotalVolumeSum } from "lib/legacy";
 import { ARBITRUM, MAINNET } from "config/chains";
 import { getServerUrl } from "config/backend";
 import { bigNumberify } from "lib/numbers";
-const ACTIVE_CHAIN_IDS = [MAINNET];
+const ACTIVE_CHAIN_IDS = [ARBITRUM];
 
 export default function useTotalVolume() {
   const { data: totalVolume } = useSWR(

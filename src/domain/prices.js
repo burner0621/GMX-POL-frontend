@@ -146,7 +146,6 @@ async function getChartPricesFromStats(chainId, symbol, period) {
   const timeDiff = CHART_PERIODS[period] * 3000;
   const from = Math.floor(Date.now() / 1000 - timeDiff);
   const url = `${GMX_STATS_API_URL}/candles/${symbol}?preferableChainId=${chainId}&period=${period}&from=${from}&preferableSource=fast`;
-  console.log (url, "<<<<<<<<<<<<<<<<")
 
   const TIMEOUT = 5000;
   const res = await new Promise(async (resolve, reject) => {

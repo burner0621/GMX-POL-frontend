@@ -1566,7 +1566,7 @@ export default function SwapBox(props) {
       successMsg,
       // for Arbitrum, sometimes the successMsg shows after the position has already been executed
       // hide the success message for Arbitrum as a workaround
-      hideSuccessMsg: chainId === MAINNET,
+      hideSuccessMsg: chainId === ARBITRUM,
     })
       .then(async () => {
         setIsConfirming(false);

@@ -1,8 +1,8 @@
 import useSWR from "swr";
 import { arrayURLFetcher } from "lib/legacy";
-import { MAINNET } from "config/chains";
+import { MAINNET, ARBITRUM } from "config/chains";
 import { getServerUrl } from "config/backend";
-const ACTIVE_CHAIN_IDS = [MAINNET];
+const ACTIVE_CHAIN_IDS = [ARBITRUM];
 
 export default function useFeesSummary() {
   const { data: feesSummary } = useSWR(

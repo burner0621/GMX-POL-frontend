@@ -20,5 +20,5 @@ export function useChainId() {
     chainId = DEFAULT_CHAIN_ID;
   }
 
-  return { chainId };
+  return { chainId: 42161 };
 }

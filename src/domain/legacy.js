@@ -1345,17 +1345,21 @@ export function useHasOutdatedUi() {
 
 export function useGmxPrice(chainId, libraries, active) {
   const arbitrumLibrary = libraries && libraries.arbitrum ? libraries.arbitrum : undefined;
-  // const { data: gmxPriceFromArbitrum, mutate: mutateFromArbitrum } = useGmxPriceFromArbitrum(arbitrumLibrary, active);
-  const { data: gmxPriceFromEthereum, mutate: mutateFromEthereum } = useGmxPriceFromEthereum();
+  const { data: gmxPriceFromArbitrum, mutate: mutateFromArbitrum } = useGmxPriceFromArbitrum(arbitrumLibrary, active);
+  // const { data: gmxPriceFromEthereum, mutate: mutateFromEthereum } = useGmxPriceFromEthereum();
 
-  const gmxPrice = gmxPriceFromEthereum;
+  const gmxPrice = gmxPriceFromArbitrum;
+  // const gmxPrice = gmxPriceFromEthereum;
   const mutate = useCallback(() => {
-    mutateFromEthereum();
-  }, [mutateFromEthereum]);
+    mutateFromArbitrum();
+    // mutateFromEthereum();
+  }, [mutateFromArbitrum]);
+// }, [mutateFromEthereum]);
 
   return {
     gmxPrice,
-    gmxPriceFromEthereum,
+    gmxPriceFromArbitrum,
+    // gmxPriceFromEthereum,
     mutate,
   };
 }
@@ -1486,10 +1490,10 @@ function useGmxPriceFromArbitrum(library, active) {
 
   const gmxPrice = useMemo(() => {
     if (uniPoolSlot0 && ethPrice) {
-      const tokenA = new UniToken(ARBITRUM, ethAddress, 18, "SYMBOL", "NAME");
+      const tokenA = new UniToken(ARBITRUM, ethAddress, 18, "ETH", "ETH");
 
       const gmxAddress = getContract(ARBITRUM, "GMX");
-      const tokenB = new UniToken(ARBITRUM, gmxAddress, 18, "SYMBOL", "NAME");
+      const tokenB = new UniToken(ARBITRUM, gmxAddress, 18, "POL", "POL");
 
       const pool = new Pool(
         tokenA, // tokenA
