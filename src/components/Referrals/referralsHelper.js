@@ -24,13 +24,13 @@ export function isRecentReferralCodeNotExpired(referralCodeInfo) {
 export async function getReferralCodeTakenStatus(account, referralCode, chainId) {
   const referralCodeBytes32 = encodeReferralCode(referralCode);
   const [ownerETH] = await Promise.all([
-    getReferralCodeOwner(MAINNET, referralCodeBytes32),
+    getReferralCodeOwner(ARBITRUM, referralCodeBytes32),
   ]);
   const takenOnETH =
-    !isAddressZero(ownerETH) && (ownerETH !== account || (ownerETH === account && chainId === MAINNET));
+    !isAddressZero(ownerETH) && (ownerETH !== account || (ownerETH === account && chainId === ARBITRUM));
 
     const referralCodeTakenInfo = {
-      [MAINNET]: takenOnETH,
+      [ARBITRUM]: takenOnETH,
       both: takenOnETH,
       ownerETH,
     };

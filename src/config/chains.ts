@@ -16,8 +16,8 @@ if (isDevelopment()) {
 }
 
 export const IS_NETWORK_DISABLED = {
-  [ARBITRUM]: true,
-  [MAINNET]: false,
+  [ARBITRUM]: false,
+  [MAINNET]: true,
 };
 
 export const CHAIN_NAMES_MAP = {

@@ -24,7 +24,7 @@ export function useInfoTokens(
   fundingRateInfo?: BigNumber[],
   vaultPropsLength?: number
 ) {
-  const tokens = getTokens(chainId);console.log (chainId, ">>>>>>>>>>>>>")
+  const tokens = getTokens(chainId)
   const vaultReaderAddress = getContract(chainId, "VaultReader");
   const vaultAddress = getContract(chainId, "Vault");
   const positionRouterAddress = getContract(chainId, "PositionManager");
@@ -39,6 +39,7 @@ export function useInfoTokens(
   // console.log("---shark expandDecimals(1, 18): ", expandDecimals(1, 18));
   // console.log("---shark whitelistedTokenAddresses: ", whitelistedTokenAddresses);
   // console.log("---shark useInfoTokens end!");
+  console.log (vaultAddress, positionRouterAddress, nativeTokenAddress, whitelistedTokenAddresses, ">>>>>>>>>>>>>")
   const { data: vaultTokenInfo } = useSWR<BigNumber[], any>(
     [`useInfoTokens:${active}`, chainId, vaultReaderAddress, "getVaultTokenInfoV4"],
     {
